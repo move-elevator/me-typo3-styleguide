@@ -41,9 +41,10 @@ class TechnicalHeadline {
     `
 
     this.technicalHeadlineEl.forEach(headlineEl => {
+      const tag = headlineEl.firstElementChild.tagName.toLowerCase()
       const title = headlineEl.querySelector(".technical-headline__title")
         ?.innerHTML
-      html += `<li class="technical-headline-toc__item"><a class="technical-headline-toc__link" href="#${headlineEl.getAttribute(
+      html += `<li class="technical-headline-toc__item ${tag}"><a class="technical-headline-toc__link" href="#${headlineEl.getAttribute(
         "id"
       )}">${title}</a></li>`
     })

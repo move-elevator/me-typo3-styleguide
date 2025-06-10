@@ -22,10 +22,39 @@ ExtensionManagementUtility::addTcaSelectItem(
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['metypo3styleguide_technicalheadline'] = 'content-info';
 
+$GLOBALS['TCA']['tt_content']['columns'] = array_replace_recursive(
+    $GLOBALS['TCA']['tt_content']['columns'],
+    [
+        'tx_metypo3styleguide_technicalheadlinetag' => [
+            'label' => 'LLL:EXT:' . Configuration::EXT_KEY . '/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.tag',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'default' => 'h2',
+                'items' => [
+                    [
+                        'LLL:EXT:' . Configuration::EXT_KEY . '/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.tag.h2',
+                        'h2',
+                    ],
+                    [
+                        'LLL:EXT:' . Configuration::EXT_KEY . '/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.tag.h3',
+                        'h3',
+                    ],
+                    [
+                        'LLL:EXT:' . Configuration::EXT_KEY . '/Resources/Private/Language/locallang.xlf:contentelement.technical_headline.tag.h4',
+                        'h4',
+                    ],
+                ],
+            ],
+        ],
+    ]
+);
+
+
 $GLOBALS['TCA']['tt_content']['types']['metypo3styleguide_technicalheadline'] = [
     'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
-                    --palette--;;header,subheader,bodytext,
+                    --palette--;;header,tx_metypo3styleguide_technicalheadlinetag,subheader,bodytext,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                     --palette--;;frames,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
