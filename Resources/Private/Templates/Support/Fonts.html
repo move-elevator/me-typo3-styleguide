@@ -1,0 +1,30 @@
+<html
+    xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+    xmlns:f="http://www.w3.org/1999/XSL/Transform"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:asset.css identifier="metypo3styleguide_element_css"
+             href="EXT:me_typo3_styleguide/Resources/Public/Css/Elements.css"/>
+
+<div class="me-typo3-styleguide__frame">
+    <div class="me-typo3-styleguide__element-container">
+        <f:for each="{fonts}" as="font">
+            <div class="me-typo3-styleguide__element">
+                <div class="me-typo3-styleguide__font" style="font-family: {font.font};{f:if(condition: '{font.fontWeight}', then: ' font-weight: {font.fontWeight};')}">
+                    <p class="me-typo3-styleguide__font-label">
+                        {f:if(condition: font.label, then: font.label, else: font.font)}
+                    </p>
+                    <p class="me-typo3-styleguide__font-example">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                    </p>
+                    <p class="me-typo3-styleguide__font-example">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
+                        abcdefghijklmnopqrstuvwxyz<br/>
+                        1234567890!@#$%^&*()
+                    </p>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>

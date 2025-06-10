@@ -1,0 +1,24 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:asset.css identifier="metypo3styleguide_technicalheadline_css" href="EXT:me_typo3_styleguide/Resources/Public/Css/TechnicalHeadline.css" />
+<f:asset.script identifier="metypo3styleguide_technicalheadline_script" src="EXT:me_typo3_styleguide/Resources/Public/JavaScript/technical_headline.js" />
+
+<div class="technical-headline" id="{data.header -> sg:formatSlug()}">
+    <h2 class="technical-headline__headline">
+        <a class="technical-headline__link" href="#{data.header -> sg:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
+        <span class="technical-headline__title">{data.header}</span>
+        <a class="technical-headline__to-top" href="#technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
+            &uarr;
+        </a>
+    </h2>
+    <f:if condition="{data.subheader}">
+        <h3 class="technical-headline__label">{data.subheader}</h3>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+        <p class="technical-headline__text">{data.bodytext -> f:format.raw()}</p>
+    </f:if>
+</div>

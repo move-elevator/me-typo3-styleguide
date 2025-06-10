@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+			<trans-unit id="usages.toolbar-label">
+				<source />
+				<target>Letzte Aktualisierung</target>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.label">
+				<source />
+				<target>Technische Überschrift</target>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.description">
+				<source />
+				<target>Hilfsinhalt um technische Informationen als Headline Element auszuspielen</target>
+			</trans-unit>
+			<trans-unit id="technical_headline.headline.link.title">
+				<source />
+				<target>Link auf sich selbst</target>
+			</trans-unit>
+			<trans-unit id="technical_headline.headline.top.title">
+				<source />
+				<target>Nach oben</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

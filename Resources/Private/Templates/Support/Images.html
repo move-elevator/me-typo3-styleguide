@@ -1,0 +1,32 @@
+<html
+    xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+    xmlns:f="http://www.w3.org/1999/XSL/Transform"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:asset.css identifier="metypo3styleguide_element_css"
+             href="EXT:me_typo3_styleguide/Resources/Public/Css/Elements.css"/>
+
+
+<div class="me-typo3-styleguide__frame">
+    <div class="me-typo3-styleguide__element-container">
+        <f:for each="{images}" as="image">
+            <f:if condition="{image.path}">
+                <div class="me-typo3-styleguide__element">
+                    <div class="me-typo3-styleguide__image">
+                        <div class="me-typo3-styleguide__image-box">
+                            <img src="{f:uri.resource(path: image.path)}" alt="{image.caption}"/>
+                        </div>
+                    </div>
+                    <f:if condition="{image.caption}">
+                        <div class="me-typo3-styleguide__element-caption">
+                            <p class="me-typo3-styleguide__image-caption-text">
+                                {image.caption}
+                            </p>
+                        </div>
+                    </f:if>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+</div>
