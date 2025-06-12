@@ -8,13 +8,13 @@
 <f:asset.script identifier="metypo3styleguide_technicalheadline_script" src="EXT:me_typo3_styleguide/Resources/Public/JavaScript/technical_headline.js" />
 
 <div class="technical-headline" id="{data.header -> sg:formatSlug()}">
-    <h2 class="technical-headline__headline">
+    <{data.tx_metypo3styleguide_technicalheadlinetag} class="technical-headline__headline">
         <a class="technical-headline__link" href="#{data.header -> sg:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
         <span class="technical-headline__title">{data.header}</span>
         <a class="technical-headline__to-top" href="#technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
             &uarr;
         </a>
-    </h2>
+    </{data.tx_metypo3styleguide_technicalheadlinetag}>
     <f:if condition="{data.subheader}">
         <h3 class="technical-headline__label">{data.subheader}</h3>
     </f:if>

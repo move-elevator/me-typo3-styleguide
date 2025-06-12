@@ -12,6 +12,12 @@
     gap: 1rem;
     font-size: 1.75rem;
 }
+h3.technical-headline__headline {
+    font-size: 1.5rem;
+}
+h4.technical-headline__headline {
+    font-size: 1.25rem;
+}
 .technical-headline__link {
     color: #646464;
     text-decoration: none;
@@ -67,6 +73,12 @@
 }
 .technical-headline-toc__item {
     list-style: none;
+}
+.technical-headline-toc__item.h3 {
+    margin-left: 2rem;
+}
+.technical-headline-toc__item.h4 {
+    margin-left: 4rem;
 }
 .technical-headline-toc__item::before {
     content: '# ';

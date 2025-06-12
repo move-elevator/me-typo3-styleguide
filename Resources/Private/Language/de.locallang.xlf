@@ -15,6 +15,22 @@
 				<source />
 				<target>Hilfsinhalt um technische Informationen als Headline Element auszuspielen</target>
 			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.tag">
+				<source />
+				<target>Überschriften-Level</target>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.tag.h2">
+				<source />
+				<target>h2</target>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.tag.h3">
+				<source />
+				<target>h3</target>
+			</trans-unit>
+			<trans-unit id="contentelement.technical_headline.tag.h4">
+				<source />
+				<target>h4</target>
+			</trans-unit>
 			<trans-unit id="technical_headline.headline.link.title">
 				<source />
 				<target>Link auf sich selbst</target>
