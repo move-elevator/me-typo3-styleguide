@@ -12,8 +12,16 @@ This extension provides several tools for a TYPO3 styleguide.
 
 ## Installation
 
+Install via composer:
+
 ``` bash
 composer require move-elevator/me-typo3-styleguide
+```
+
+Include static TypoScript template or manually import it:
+
+```
+@import 'EXT:me_typo3_styleguide/Configuration/TypoScript/setup.typoscript'
 ```
 
 ## Documentation

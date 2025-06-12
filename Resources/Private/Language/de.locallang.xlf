@@ -39,6 +39,10 @@
 				<source />
 				<target>Nach oben</target>
 			</trans-unit>
+			<trans-unit id="technical_headline.toc.title">
+				<source />
+				<target>Inhaltsverzeichnis</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
