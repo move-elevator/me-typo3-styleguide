@@ -5,6 +5,20 @@ namespace MoveElevator\Styleguide\ViewHelpers;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
+/**
+ * This ViewHelper generates a contrast color based on a given color.
+ *
+ * Usage:
+ * ```html
+ *
+ * <html
+ *   xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+ *   data-namespace-typo3-fluid="true"
+ * >
+ * <sg:contrastColor color="#ff5733" />
+ *
+ * ```
+ */
 class ContrastColorViewHelper extends AbstractViewHelper
 {
     public function initializeArguments(): void

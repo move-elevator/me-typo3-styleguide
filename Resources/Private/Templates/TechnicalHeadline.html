@@ -9,7 +9,7 @@
 
 <div class="technical-headline" id="{data.header -> sg:formatSlug()}">
     <{data.tx_metypo3styleguide_technicalheadlinetag} class="technical-headline__headline">
-        <a class="technical-headline__link" href="#{data.header -> sg:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
+        <a class="technical-headline__link" href="#{data.header -> sg:format.slug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
         <span class="technical-headline__title">{data.header}</span>
         <a class="technical-headline__to-top" href="#technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
             &uarr;

@@ -1,19 +1,27 @@
 <?php
-namespace MoveElevator\Styleguide\ViewHelpers;
+namespace MoveElevator\Styleguide\ViewHelpers\Render;
 
-/*
- * This file is part of the FluidTYPO3/Vhs project under GPLv2 or later.
- *
- * For the full copyright and license information, please read the
- * LICENSE.md file that was distributed with this source code.
- */
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class RenderTemplateViewHelper extends AbstractViewHelper
+/**
+ * This ViewHelper renders a template file with optional variables and paths.
+ *
+ * Usage:
+ * ```html
+ * <html
+ *   xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+ *   data-namespace-typo3-fluid="true"
+ * >
+ *
+ * <sg:render.template file="EXT:myext/Resources/Private/Templates/MyTemplate.html" variables="{myVar: 'value'}" />
+ * ```
+ *
+ */
+class TemplateViewHelper extends AbstractViewHelper
 {
     /**
      * @var bool
@@ -98,7 +106,7 @@ class RenderTemplateViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface|ViewInterface $view
+     * @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view
      */
     protected static function renderView($view, array $arguments): string
     {
