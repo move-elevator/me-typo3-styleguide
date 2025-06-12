@@ -33,7 +33,7 @@ class TechnicalHeadline {
     if (document.querySelector("#me-typo3-styleguide-technical-headline-toc")) {
       return
     }
-    const tocLabel = this.technicalHeadlineEl.item(0).getAttribute("data-label-toc")
+    const tocLabel = this.firstEl.getAttribute("data-label-toc")
 
     let html = `
       <div id="me-typo3-styleguide-technical-headline-toc" class="me-typo3-styleguide-technical-headline-toc">
