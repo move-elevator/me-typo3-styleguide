@@ -1,4 +1,4 @@
-.technical-headline {
+.me-typo3-styleguide-technical-headline {
     margin: 2rem 0 1rem;
     padding: 2rem;
     background-color: #f6f4f0;
@@ -6,33 +6,35 @@
     word-break: break-all;
     scroll-margin: 3.25rem;
 }
-.technical-headline__headline {
+.me-typo3-styleguide-technical-headline__headline {
     display: flex;
     flex-wrap: wrap;
+    font-family: monospace, sans-serif;
     gap: 1rem;
     font-size: 1.75rem;
 }
-h3.technical-headline__headline {
+h3.me-typo3-styleguide-technical-headline__headline {
     font-size: 1.5rem;
 }
-h4.technical-headline__headline {
+h4.me-typo3-styleguide-technical-headline__headline {
     font-size: 1.25rem;
 }
-.technical-headline__link {
+.me-typo3-styleguide-technical-headline__link {
     color: #646464;
     text-decoration: none;
 }
-.technical-headline__link:hover {
+.me-typo3-styleguide-technical-headline__link:hover {
     color: #000000;
 }
-.technical-headline__title {
+.me-typo3-styleguide-technical-headline__title {
     flex-grow: 1;
 }
-.technical-headline__label {
+.me-typo3-styleguide-technical-headline__label {
     color: #646464;
+    font-family: monospace, sans-serif;
     font-size: 1.25rem;
 }
-.technical-headline__to-top {
+.me-typo3-styleguide-technical-headline__to-top {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0;
@@ -52,12 +54,12 @@ h4.technical-headline__headline {
     color: black;
     cursor: pointer;
 }
-.technical-headline__to-top:hover {
+.me-typo3-styleguide-technical-headline__to-top:hover {
     background-color: rgba(0, 0, 0, 0);
     color: black;
     box-shadow: inset 0 0 0 .125rem #646464;
 }
-.technical-headline-toc {
+.me-typo3-styleguide-technical-headline-toc {
     margin-bottom: 1rem;
     padding: 2rem;
     background-color: #f6f4f0;
@@ -65,26 +67,31 @@ h4.technical-headline__headline {
     line-break: anywhere;
     scroll-margin: 3.25rem;
 }
-.technical-headline-toc__items {
+.me-typo3-styleguide-technical-headline-toc__headline {
+    font-family: monospace, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.me-typo3-styleguide-technical-headline-toc__items {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     margin: 2rem 0 1rem;
 }
-.technical-headline-toc__item {
+.me-typo3-styleguide-technical-headline-toc__item {
     list-style: none;
 }
-.technical-headline-toc__item.h3 {
+.me-typo3-styleguide-technical-headline-toc__item.h3 {
     margin-left: 2rem;
 }
-.technical-headline-toc__item.h4 {
+.me-typo3-styleguide-technical-headline-toc__item.h4 {
     margin-left: 4rem;
 }
-.technical-headline-toc__item::before {
+.me-typo3-styleguide-technical-headline-toc__item::before {
     content: '# ';
     color: #646464;
 }
-.technical-headline-toc__link {
+.me-typo3-styleguide-technical-headline-toc__link {
     display: inline-flex;
     min-width: 10rem;
     padding: 0.25rem 0;
