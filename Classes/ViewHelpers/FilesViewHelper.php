@@ -6,6 +6,23 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
+/**
+ * This ViewHelper generates a list of files in a specified directory.
+ *
+ * Usage:
+ * ```html
+ *
+ * <html
+ *   xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+ *   data-namespace-typo3-fluid="true"
+ * >
+ *
+ * <f:for each="{sg:files(path: path)}" as="file">
+ *     {file}
+ * </f:for>
+ *
+ * ```
+ */
 class FilesViewHelper extends AbstractViewHelper
 {
     public function initializeArguments(): void

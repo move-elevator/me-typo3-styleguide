@@ -1,6 +1,6 @@
 <?php
 
-namespace MoveElevator\Styleguide\ViewHelpers;
+namespace MoveElevator\Styleguide\ViewHelpers\Format;
 
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
@@ -11,12 +11,17 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  *
  * Usages:
  * ```html
- * <sg:formatSlug>XYZ</xt3:formatSlug>
+ * <html
+ *  xmlns:sg="http://typo3.org/ns/MoveElevator/Styleguide/ViewHelpers"
+ *  data-namespace-typo3-fluid="true"
+ * >
  *
- * {value -> sg:formatSlug()}
+ * <sg:format.slug>XYZ</xt3:format.slug>
+ *
+ * {value -> sg:format.slug()}
  * ```
  */
-class FormatSlugViewHelper extends AbstractViewHelper
+class SlugViewHelper extends AbstractViewHelper
 {
     use CompileWithContentArgumentAndRenderStatic;
     public function initializeArguments(): void

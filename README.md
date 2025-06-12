@@ -19,6 +19,12 @@ __Features__:
 composer require move-elevator/me-typo3-styleguide
 ```
 
+## Documentation
+
+### ViewHelpers
+
+See the [ViewHelpers documentation](./Documentation/ViewHelpers/CLASSES.md) for a complete list of available ViewHelpers.
+
 ## License
 
 This project is licensed

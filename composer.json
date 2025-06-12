@@ -48,6 +48,7 @@
 		}
 	},
 	"scripts": {
+		"doc:viewhelpers": "php Documentation/phpdoc.php -d Classes/ViewHelpers -o Documentation/ViewHelpers",
 		"php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
 		"php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
 		"php:stan": "php vendor/bin/phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline --memory-limit=2G",
