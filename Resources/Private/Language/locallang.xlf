@@ -30,6 +30,9 @@
 			<trans-unit id="technical_headline.headline.top.title">
 				<source>To top</source>
 			</trans-unit>
+			<trans-unit id="technical_headline.toc.title">
+				<source>Table of contents</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
