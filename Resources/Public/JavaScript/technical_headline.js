@@ -15,7 +15,7 @@ class TechnicalHeadline {
 
   cacheDom() {
     const technicalHeadlineElement = document.querySelectorAll(
-      ".technical-headline"
+      ".me-typo3-styleguide-technical-headline"
     )
     const firstElement = technicalHeadlineElement[0]
 
@@ -30,22 +30,22 @@ class TechnicalHeadline {
   }
 
   generateTableOfContents() {
-    if (document.querySelector("#technical-headline-toc")) {
+    if (document.querySelector("#me-typo3-styleguide-technical-headline-toc")) {
       return
     }
 
     let html = `
-      <div id="technical-headline-toc" class="technical-headline-toc">
-        <h2 class="technical-headline-toc__headline">Table of contents</h2>
-        <ul class="technical-headline-toc__items">
+      <div id="me-typo3-styleguide-technical-headline-toc" class="me-typo3-styleguide-technical-headline-toc">
+        <h2 class="me-typo3-styleguide-technical-headline-toc__headline">Table of contents</h2>
+        <ul class="me-typo3-styleguide-technical-headline-toc__items">
     `
 
     this.technicalHeadlineEl.forEach(headlineEl => {
       const firstChild = headlineEl.firstElementChild
       const tag = firstChild && firstChild.tagName ? firstChild.tagName.toLowerCase() : 'h2'
-      const title = headlineEl.querySelector(".technical-headline__title")
+      const title = headlineEl.querySelector(".me-typo3-styleguide-technical-headline__title")
         ?.innerHTML
-      html += `<li class="technical-headline-toc__item ${tag}"><a class="technical-headline-toc__link" href="#${headlineEl.getAttribute(
+      html += `<li class="me-typo3-styleguide-technical-headline-toc__item ${tag}"><a class="me-typo3-styleguide-technical-headline-toc__link" href="#${headlineEl.getAttribute(
         "id"
       )}">${title}</a></li>`
     })

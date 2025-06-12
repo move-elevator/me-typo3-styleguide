@@ -7,18 +7,18 @@
 <f:asset.css identifier="metypo3styleguide_technicalheadline_css" href="EXT:me_typo3_styleguide/Resources/Public/Css/TechnicalHeadline.css" />
 <f:asset.script identifier="metypo3styleguide_technicalheadline_script" src="EXT:me_typo3_styleguide/Resources/Public/JavaScript/technical_headline.js" />
 
-<div class="technical-headline" id="{data.header -> sg:formatSlug()}">
-    <{data.tx_metypo3styleguide_technicalheadlinetag} class="technical-headline__headline">
-        <a class="technical-headline__link" href="#{data.header -> sg:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
-        <span class="technical-headline__title">{data.header}</span>
-        <a class="technical-headline__to-top" href="#technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
+<div class="me-typo3-styleguide-technical-headline" id="{data.header -> sg:formatSlug()}">
+    <{data.tx_metypo3styleguide_technicalheadlinetag} class="me-typo3-styleguide-technical-headline__headline">
+        <a class="me-typo3-styleguide-technical-headline__link" href="#{data.header -> sg:formatSlug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
+        <span class="me-typo3-styleguide-technical-headline__title">{data.header}</span>
+        <a class="me-typo3-styleguide-technical-headline__to-top" href="#me-typo3-styleguide-technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
             &uarr;
         </a>
     </{data.tx_metypo3styleguide_technicalheadlinetag}>
     <f:if condition="{data.subheader}">
-        <h3 class="technical-headline__label">{data.subheader}</h3>
+        <h3 class="me-typo3-styleguide-technical-headline__label">{data.subheader}</h3>
     </f:if>
     <f:if condition="{data.bodytext}">
-        <p class="technical-headline__text">{data.bodytext -> f:format.raw()}</p>
+        <p class="me-typo3-styleguide-technical-headline__text">{data.bodytext -> f:format.raw()}</p>
     </f:if>
 </div>
