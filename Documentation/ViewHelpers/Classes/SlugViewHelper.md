@@ -9,8 +9,8 @@ Usages:
  data-namespace-typo3-fluid="true"
 >
 
-<sg:formatSlug>XYZ</xt3:formatSlug>
+<sg:format.slug>XYZ</xt3:format.slug>
 
-{value -> sg:formatSlug()}
+{value -> sg:format.slug()}
 ```
 
