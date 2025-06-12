@@ -7,11 +7,7 @@
 }
 
 .me-typo3-styleguide__image {
-    background-image:
-        linear-gradient(45deg, #eee 25%, transparent 25%),
-        linear-gradient(-45deg, #eee 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #eee 75%),
-        linear-gradient(-45deg, transparent 75%, #eee 75%);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0;
     padding: 40px;
@@ -27,7 +23,11 @@
 }
 
 .me-typo3-styleguide__image:hover {
-    background-blend-mode: darken;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
+    ),
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
 }
 
 .me-typo3-styleguide__image-box {
