@@ -7,9 +7,21 @@
 <f:asset.css identifier="metypo3styleguide_technicalheadline_css" href="EXT:me_typo3_styleguide/Resources/Public/Css/TechnicalHeadline.css" />
 <f:asset.script identifier="metypo3styleguide_technicalheadline_script" src="EXT:me_typo3_styleguide/Resources/Public/JavaScript/technical_headline.js" />
 
+<f:if condition="{data.tx_metypo3styleguide_technicalheadlinetag} == 'h3'">
+    <f:then>
+        <f:variable name="anchor">##</f:variable>
+    </f:then>
+    <f:else if="{data.tx_metypo3styleguide_technicalheadlinetag} == 'h4'">
+        <f:variable name="anchor">###</f:variable>
+    </f:else>
+    <f:else>
+        <f:variable name="anchor">#</f:variable>
+    </f:else>
+</f:if>
+
 <div class="me-typo3-styleguide-technical-headline" id="{data.header -> sg:format.slug()}">
     <{data.tx_metypo3styleguide_technicalheadlinetag} class="me-typo3-styleguide-technical-headline__headline">
-        <a class="me-typo3-styleguide-technical-headline__link" href="#{data.header -> sg:format.slug()}">#<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
+        <a class="me-typo3-styleguide-technical-headline__link" href="#{data.header -> sg:format.slug()}">{anchor}<span class="visually-hidden">{f:translate(key: 'technical_headline.headline.link.title', extensionName: 'metypo3styleguide')}</span></a>
         <span class="me-typo3-styleguide-technical-headline__title">{data.header}</span>
         <a class="me-typo3-styleguide-technical-headline__to-top" href="#me-typo3-styleguide-technical-headline-toc" aria-label="{f:translate(key: 'technical_headline.headline.top.title', extensionName: 'metypo3styleguide')}">
             &uarr;
