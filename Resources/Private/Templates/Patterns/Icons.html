@@ -5,19 +5,19 @@
 >
 
 <f:asset.css identifier="metypo3styleguide_element_css"
-             href="EXT:me_typo3_styleguide/Resources/Public/Css/Patterns.css"/>
+             href="EXT:typo3_styleguide/Resources/Public/Css/Patterns.css"/>
 
-<div class="me-typo3-styleguide__frame">
-    <div class="me-typo3-styleguide__element-container">
+<div class="typo3-styleguide__frame">
+    <div class="typo3-styleguide__element-container">
         <f:for each="{sg:files(path: path)}" as="file">
-            <div class="me-typo3-styleguide__element">
-                <div class="me-typo3-styleguide__image">
-                    <div class="me-typo3-styleguide__image-box">
+            <div class="typo3-styleguide__element">
+                <div class="typo3-styleguide__image">
+                    <div class="typo3-styleguide__image-box">
                         <img src="{f:uri.resource(path: '{path}{file}')}" alt="{file}"/>
                     </div>
                 </div>
-                <div class="me-typo3-styleguide__element-caption">
-                    <p class="me-typo3-styleguide__image-caption-text">
+                <div class="typo3-styleguide__element-caption">
+                    <p class="typo3-styleguide__image-caption-text">
                         {file -> sg:format.filename()}
                     </p>
                 </div>

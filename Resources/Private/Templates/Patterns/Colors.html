@@ -5,21 +5,21 @@
 >
 
 <f:asset.css identifier="metypo3styleguide_element_css"
-             href="EXT:me_typo3_styleguide/Resources/Public/Css/Patterns.css"/>
+             href="EXT:typo3_styleguide/Resources/Public/Css/Patterns.css"/>
 
-<div class="me-typo3-styleguide__frame">
-    <div class="me-typo3-styleguide__element-container">
+<div class="typo3-styleguide__frame">
+    <div class="typo3-styleguide__element-container">
         <f:for each="{colors}" as="color">
             <f:variable name="contrastColor">
                 <sg:contrastColor color="{color.color}"/>
             </f:variable>
-            <div class="me-typo3-styleguide__element">
-                <div class="me-typo3-styleguide__color"
+            <div class="typo3-styleguide__element">
+                <div class="typo3-styleguide__color"
                      style="background-color: {color.color}; color: {contrastColor};">
-                    <p class="me-typo3-styleguide__color-value">
+                    <p class="typo3-styleguide__color-value">
                         {color.color}
                     </p>
-                    <p class="me-typo3-styleguide__color-label">
+                    <p class="typo3-styleguide__color-label">
                         {color.label}
                     </p>
                 </div>

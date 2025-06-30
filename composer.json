@@ -1,5 +1,5 @@
 {
-	"name": "move-elevator/me-typo3-styleguide",
+	"name": "move-elevator/typo3-styleguide",
 	"description": "This extension provides several tools for a TYPO3 styleguide.",
 	"type": "typo3-cms-extension",
 	"license": [
@@ -34,7 +34,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "me_typo3_styleguide"
+			"extension-key": "typo3_styleguide"
 		}
 	},
 	"config": {

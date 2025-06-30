@@ -3,8 +3,8 @@
 plugin {
     tx_bwstatictemplate {
         view {
-            partialRootPath = EXT:me_typo3_styleguide/Resources/Private/Partials/
-            templateRootPath = EXT:me_typo3_styleguide/Resources/Private/Templates/
+            partialRootPath = EXT:typo3_styleguide/Resources/Private/Partials/
+            templateRootPath = EXT:typo3_styleguide/Resources/Private/Templates/
         }
     }
 }

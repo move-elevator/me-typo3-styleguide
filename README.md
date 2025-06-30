@@ -2,7 +2,7 @@
 
 ![Extension icon](Resources/Public/Icons/Extension.svg)
 
-# TYPO3 extension `me_typo3_styleguide`
+# TYPO3 extension `typo3_styleguide`
 
 [![Supported TYPO3 versions](https://badgen.net/badge/TYPO3/12%20&%2013/orange)]()
 
@@ -15,13 +15,13 @@ This extension provides several tools for a TYPO3 styleguide.
 Install via composer:
 
 ``` bash
-composer require move-elevator/me-typo3-styleguide
+composer require move-elevator/typo3-styleguide
 ```
 
 Include static TypoScript template or manually import it:
 
 ```
-@import 'EXT:me_typo3_styleguide/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:typo3_styleguide/Configuration/TypoScript/setup.typoscript'
 ```
 
 ## Documentation
@@ -66,7 +66,7 @@ This pattern provides a simple image template that can be used to display images
 
 ![pattern-image.jpg](Documentation/Images/pattern-image.jpg)
 
-*Frontend template*: `EXT:me_typo3_styleguide/Resources/Private/Templates/Patterns/Images.html`
+*Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Images.html`
 
 Example data:
 ```json
@@ -86,7 +86,7 @@ This pattern provides a simple icon template that can be used to display all ico
 
 ![pattern-icons.jpg](Documentation/Images/pattern-icons.jpg)
 
-*Frontend template*: `EXT:me_typo3_styleguide/Resources/Private/Templates/Patterns/Icons.html`
+*Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Icons.html`
 
 Example data:
 ```json
@@ -101,7 +101,7 @@ This pattern provides a simple color template that can be used to display colors
 
 ![pattern-colors.jpg](Documentation/Images/pattern-colors.jpg)
 
-*Frontend template*: `EXT:me_typo3_styleguide/Resources/Private/Templates/Patterns/Colors.html`
+*Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Colors.html`
 
 Example data:
 ```json
@@ -125,7 +125,7 @@ This pattern provides a simple font template that can be used to display availab
 
 ![pattern-font.jpg](Documentation/Images/pattern-font.jpg)
 
-*Frontend template*: `EXT:me_typo3_styleguide/Resources/Private/Templates/Patterns/Fonts.html`
+*Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Fonts.html`
 
 Example data:
 ```json

@@ -6,6 +6,6 @@ namespace MoveElevator\Styleguide;
 
 class Configuration
 {
-    final public const EXT_KEY = 'me_typo3_styleguide';
+    final public const EXT_KEY = 'typo3_styleguide';
     final public const EXT_NAME = 'MeTypo3Styleguide';
 }
