@@ -1,7 +1,7 @@
 @import 'EXT:bw_static_template/Configuration/TypoScript/setup.typoscript'
 
 lib.contentElement {
-  templateRootPaths.1722340760 = EXT:me_typo3_styleguide/Resources/Private/Templates/
+  templateRootPaths.1722340760 = EXT:typo3_styleguide/Resources/Private/Templates/
 }
 tt_content {
   metypo3styleguide_technicalheadline =< lib.contentElement

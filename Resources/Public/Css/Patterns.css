@@ -1,4 +1,4 @@
-.me-typo3-styleguide__element-container {
+.typo3-styleguide__element-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
     margin: 0 20px;
 }
 
-.me-typo3-styleguide__image {
+.typo3-styleguide__image {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0;
@@ -22,7 +22,7 @@
     border-radius: 10px;
 }
 
-.me-typo3-styleguide__image:hover {
+.typo3-styleguide__image:hover {
     background: linear-gradient(
         rgba(0, 0, 0, 0.1),
         rgba(0, 0, 0, 0.1)
@@ -30,21 +30,21 @@
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
 }
 
-.me-typo3-styleguide__image-box {
+.typo3-styleguide__image-box {
     height: 50px;
     width: 50px;
 }
 
-.me-typo3-styleguide__image-box img {
+.typo3-styleguide__image-box img {
     height: 100%;
     width: 100%;
 }
 
-.me-typo3-styleguide__element-caption {
+.typo3-styleguide__element-caption {
     text-align: center;
 }
 
-.me-typo3-styleguide__color {
+.typo3-styleguide__color {
     padding: 40px;
     width: 200px;
     height: 200px;
@@ -57,20 +57,20 @@
     border-radius: 10px;
 }
 
-.me-typo3-styleguide__color p {
+.typo3-styleguide__color p {
     margin: 0;
     padding: 0;
 }
 
-.me-typo3-styleguide__color-value {
+.typo3-styleguide__color-value {
     font-weight: bolder;
 }
 
-.me-typo3-styleguide__color-label {
+.typo3-styleguide__color-label {
     font-style: italic;
 }
 
-.me-typo3-styleguide__font {
+.typo3-styleguide__font {
     padding: 40px;
     width: 100%;
     min-height: 100px;
@@ -84,7 +84,7 @@
     margin-bottom: 2rem;
 }
 
-.me-typo3-styleguide__font p {
+.typo3-styleguide__font p {
     margin: 0;
     padding: 0;
 }
