@@ -6,6 +6,10 @@
     margin: 0 20px;
 }
 
+.typo3-styleguide__element[data-copy]:hover {
+    cursor: pointer;
+}
+
 .typo3-styleguide__image {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
     background-size: 20px 20px;
@@ -30,9 +34,14 @@
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAnUExURfz8/P7+/ujo6Obm5ufn5/////39/enp6efn6Ofo6P39/urq6unp6vERkkUAAAABYktHRAX4b+nHAAAAB3RJTUUH6QYMDDA6KFm81wAAAGVJREFUCNdjYBQUFBRQdnFxcWYQDQ0NDatQUlJSgTBLlJRmIphKpDMDS4DmTmbgSktLE9heXl5+iEEdSFYzAvkLGCyBcu5gVQxOQB3uqVCm5iQ4Uwk7E0ltE5JoO4RpAjTXCOwrAMX7Nqc6R1FeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI1LTA2LTEyVDEyOjQ4OjQzKzAwOjAwMTAHLQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNS0wNi0xMlQxMjo0ODo0MyswMDowMEBtv5EAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjUtMDYtMTJUMTI6NDg6NTgrMDA6MDDZ1coqAAAAAElFTkSuQmCC);
 }
 
-.typo3-styleguide__image-box {
+.typo3-styleguide__icon .typo3-styleguide__image-box {
     height: 50px;
     width: 50px;
+}
+
+.typo3-styleguide__image-box {
+    height: 100px;
+    width: 100px;
 }
 
 .typo3-styleguide__image-box img {
@@ -41,10 +50,13 @@
 }
 
 .typo3-styleguide__element-caption {
+    font-family: monospace, sans-serif;
+    max-width: 200px;
     text-align: center;
 }
 
 .typo3-styleguide__color {
+    font-family: monospace, sans-serif;
     padding: 40px;
     width: 200px;
     height: 200px;
@@ -55,6 +67,20 @@
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.typo3-styleguide__color::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.typo3-styleguide__color:hover::after {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .typo3-styleguide__color p {
@@ -87,4 +113,18 @@
 .typo3-styleguide__font p {
     margin: 0;
     padding: 0;
+}
+
+.copy-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    z-index: 10;
+    pointer-events: none;
+    font-family: sans-serif;
 }
