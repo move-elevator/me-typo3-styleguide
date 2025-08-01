@@ -13,6 +13,8 @@
 
 This extension provides several tools for a simple TYPO3 based styleguide.
 
+![Screenshot](Documentation/Images/screenshot.jpg)
+
 > [!NOTE]
 > This extension is more of a best practice for implementing and maintaining an editorial style guide in TYPO3 with small reusable helpers.
 
@@ -29,8 +31,6 @@ This extension provides several tools for a simple TYPO3 based styleguide.
 
 * TYPO3 >= 11.5
 * PHP 8.1+
-
-Install via composer:
 
 ### Composer
 
