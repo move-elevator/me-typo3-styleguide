@@ -46,7 +46,7 @@ class TechnicalHeadline {
       const tag = firstChild && firstChild.tagName ? firstChild.tagName.toLowerCase() : 'h2'
       const title = headlineEl.querySelector(".typo3-styleguide-technical-headline__title")
         ?.innerHTML
-      html += `<li class="typo3-styleguide-technical-headline-toc__item ${tag}"><a class="typo3-styleguide-technical-headline-toc__link" href="#${headlineEl.getAttribute(
+      html += `<li class="typo3-styleguide-technical-headline-toc__item typo3-styleguide-technical-headline-toc__item--${tag}"><a class="typo3-styleguide-technical-headline-toc__link" href="#${headlineEl.getAttribute(
         "id"
       )}">${title}</a></li>`
     })

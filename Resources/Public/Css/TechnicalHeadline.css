@@ -81,10 +81,10 @@ h4.typo3-styleguide-technical-headline__headline {
 .typo3-styleguide-technical-headline-toc__item {
     list-style: none;
 }
-.typo3-styleguide-technical-headline-toc__item.h3 {
+.typo3-styleguide-technical-headline-toc__item.typo3-styleguide-technical-headline-toc__item--h3 {
     margin-left: 2rem;
 }
-.typo3-styleguide-technical-headline-toc__item.h4 {
+.typo3-styleguide-technical-headline-toc__item.typo3-styleguide-technical-headline-toc__item--h4 {
     margin-left: 4rem;
 }
 .typo3-styleguide-technical-headline-toc__item::before {
