@@ -1,16 +1,22 @@
 <?php
 
-/**
- * This script scans a specified directory (and its subdirectories) for PHP files,
- * extracts class documentation comments, and generates corresponding Markdown files
- * in a specified output directory. Additionally, it generates a table of contents
- * Markdown file that lists all generated class documentation files.
+/*
+ * This file is part of the TYPO3 CMS extension "typo3_styleguide".
  *
- * Usage: php script.php -d <input directory> -o <output directory> [-t <TOC_FILENAME>]
+ * Copyright (C) 2025 move elevator GmbH <km@move-elevator.de>
  *
- * - `-d <input directory>`: The directory to scan for PHP files.
- * - `-o <output directory>`: The directory where the Markdown files will be saved.
- * - `-t <TOC_FILENAME>`: (Optional) The name of the table of contents Markdown file. Defaults to 'CLASSES.md'.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 /**

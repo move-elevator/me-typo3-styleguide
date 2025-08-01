@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the TYPO3 CMS extension "xima_typo3_internal_news".
+ * This file is part of the TYPO3 CMS extension "typo3_styleguide".
  *
- * Copyright (C) 2025 Konrad Michalik <hej@konradmichalik.dev>
+ * Copyright (C) 2025 move elevator GmbH <km@move-elevator.de>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

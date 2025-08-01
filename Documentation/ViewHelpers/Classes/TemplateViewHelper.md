@@ -11,4 +11,3 @@ Usage:
 
 <sg:render.template file="EXT:myext/Resources/Private/Templates/MyTemplate.html" variables="{myVar: 'value'}" />
 ```
-

@@ -12,4 +12,3 @@ Usage:
 <sg:contrastColor color="#ff5733" />
 
 ```
-
