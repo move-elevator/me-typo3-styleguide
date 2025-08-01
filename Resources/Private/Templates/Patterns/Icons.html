@@ -4,14 +4,15 @@
         data-namespace-typo3-fluid="true"
 >
 
-<f:asset.css identifier="metypo3styleguide_element_css"
-             href="EXT:typo3_styleguide/Resources/Public/Css/Patterns.css"/>
+<f:asset.css identifier="typo3styleguide_element_css" href="EXT:typo3_styleguide/Resources/Public/Css/Patterns.css"/>
+<f:asset.script identifier="typo3styleguide_element_js" src="EXT:typo3_styleguide/Resources/Public/JavaScript/copy.js" />
+
 
 <div class="typo3-styleguide__frame">
-    <div class="typo3-styleguide__element-container">
+    <div class="typo3-styleguide__element-container typo3-styleguide__element-container--icons">
         <f:for each="{sg:files(path: path)}" as="file">
-            <div class="typo3-styleguide__element">
-                <div class="typo3-styleguide__image">
+            <div class="typo3-styleguide__element typo3-styleguide__element--icon" data-copy="{file -> sg:format.filename()}" role="button" tabindex="0" aria-label="Copy icon name">
+                <div class="typo3-styleguide__image typo3-styleguide__icon">
                     <div class="typo3-styleguide__image-box">
                         <img src="{f:uri.resource(path: '{path}{file}')}" alt="{file}"/>
                     </div>
