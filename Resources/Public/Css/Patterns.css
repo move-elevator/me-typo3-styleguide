@@ -6,6 +6,14 @@
     margin: 0 20px;
 }
 
+.typo3-styleguide__element--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+
 .typo3-styleguide__element[data-copy]:hover {
     cursor: pointer;
 }
@@ -47,12 +55,21 @@
 .typo3-styleguide__image-box img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .typo3-styleguide__element-caption {
     font-family: monospace, sans-serif;
-    max-width: 200px;
+    width: 100%;
     text-align: center;
+    margin-top: 10px;
+}
+
+.typo3-styleguide__image-caption-text {
+    word-wrap: break-word;
+    hyphens: auto;
+    margin: 0;
 }
 
 .typo3-styleguide__color {

@@ -11,7 +11,7 @@
 <div class="typo3-styleguide__frame">
     <div class="typo3-styleguide__element-container">
         <f:for each="{sg:files(path: path)}" as="file">
-            <div class="typo3-styleguide__element" data-copy="{file -> sg:format.filename()}">
+            <div class="typo3-styleguide__element typo3-styleguide__element--icon" data-copy="{file -> sg:format.filename()}">
                 <div class="typo3-styleguide__image typo3-styleguide__icon">
                     <div class="typo3-styleguide__image-box">
                         <img src="{f:uri.resource(path: '{path}{file}')}" alt="{file}"/>
