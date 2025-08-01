@@ -1,10 +1,10 @@
 {
 	"name": "move-elevator/typo3-styleguide",
 	"description": "This extension provides several tools for a TYPO3 styleguide.",
-	"type": "typo3-cms-extension",
 	"license": [
 		"GPL-2.0-or-later"
 	],
+	"type": "typo3-cms-extension",
 	"authors": [
 		{
 			"name": "Konrad Michalik",
@@ -16,42 +16,83 @@
 		"php": "^8.1",
 		"ext-dom": "*",
 		"ext-intl": "*",
+		"blueways/bw-static-template": "^3.0 || ^4.0",
 		"typo3/cms-core": "^11.0 || ^12.0 || ^13.0",
 		"typo3/cms-fluid": "^11.0 || ^12.0 || ^13.0",
-		"typo3/cms-frontend": "^11.0 || ^12.0 || ^13.0",
-		"blueways/bw-static-template": "^3.0 || ^4.0"
+		"typo3fluid/fluid": "^2.15 || ^4.0"
 	},
 	"require-dev": {
-		"friendsofphp/php-cs-fixer": "^3.52",
-		"roave/security-advisories": "dev-latest",
-		"saschaegerer/phpstan-typo3": "^1.10",
-		"symfony/translation": "^6.3 || ^7.0"
+		"armin/editorconfig-cli": "^2.0",
+		"eliashaeussler/php-cs-fixer-config": "2.3.0",
+		"eliashaeussler/version-bumper": "^2.4 || ^3.0",
+		"ergebnis/composer-normalize": "^2.44",
+		"helhum/typo3-console": "^7.0 || ^8.1",
+		"helmich/typo3-typoscript-lint": "^3.2",
+		"move-elevator/composer-translation-validator": "^1.1",
+		"phpstan/phpstan-deprecation-rules": "^1.0 || ^2.0",
+		"phpstan/phpstan-strict-rules": "^1.0 || ^2.0",
+		"saschaegerer/phpstan-typo3": "^1.10 || ^2.0",
+		"spaze/phpstan-disallowed-calls": "^4.0",
+		"ssch/typo3-rector": "^2.10 || ^3.0",
+		"tomasvotruba/type-coverage": "^1.0 || ^2.0",
+		"typo3/cms-base-distribution": "^12.0 || ^13.4",
+		"typo3/cms-lowlevel": "^12.0 || ^13.4",
+		"typo3/coding-standards": "^0.7 || ^0.8"
 	},
 	"autoload": {
 		"psr-4": {
 			"MoveElevator\\Styleguide\\": "Classes/"
 		}
 	},
+	"config": {
+		"allow-plugins": {
+			"eliashaeussler/version-bumper": true,
+			"ergebnis/composer-normalize": true,
+			"helhum/dotenv-connector": true,
+			"move-elevator/composer-translation-validator": true,
+			"php-http/discovery": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"lock": false,
+		"sort-packages": true
+	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "typo3_styleguide"
 		}
 	},
-	"config": {
-		"sort-packages": true,
-		"lock": false,
-		"allow-plugins": {
-			"typo3/cms-composer-installers": true,
-			"typo3/class-alias-loader": true,
-			"php-http/discovery": true,
-			"helhum/dotenv-connector": true
-		}
-	},
 	"scripts": {
 		"doc:viewhelpers": "php Documentation/phpdoc.php -d Classes/ViewHelpers -o Documentation/ViewHelpers",
-		"php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
-		"php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
-		"php:stan": "php vendor/bin/phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline --memory-limit=2G",
-		"xml:lint": "find . -name '*.xlf' ! -path './vendor/*' ! -path './var/*' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout"
+		"fix": [
+			"@fix:composer",
+			"@fix:editorconfig",
+			"@fix:php"
+		],
+		"fix:composer": "@composer normalize",
+		"fix:editorconfig": "@lint:editorconfig --fix",
+		"fix:php": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
+		"lint": [
+			"@lint:composer",
+			"@lint:editorconfig",
+			"@lint:php",
+			"@lint:language",
+			"@lint:typoscript",
+			"@lint:yaml"
+		],
+		"lint:composer": "@fix:composer --dry-run",
+		"lint:editorconfig": "ec --git-only",
+		"lint:language": "@composer validate-translations ./Resources/Private/Language",
+		"lint:php": "@fix:php --dry-run",
+		"lint:typoscript": "typoscript-lint --fail-on-warnings",
+		"lint:yaml": "find ./ ! -path './vendor/*' ! -path '*/node_modules/*' ! -path './.Build/*' ! -path './xima_typo3_content_planner/*' \\( -name '*.yaml' -o -name '*.yml' \\) -exec yaml-lint {} +",
+		"migration": [
+			"@migration:rector"
+		],
+		"migration:rector": "rector process -c rector.php",
+		"sca": [
+			"@sca:php"
+		],
+		"sca:php": "phpstan analyse --memory-limit=2G"
 	}
 }

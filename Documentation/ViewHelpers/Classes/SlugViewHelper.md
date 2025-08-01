@@ -13,4 +13,3 @@ Usages:
 
 {value -> sg:format.slug()}
 ```
-

@@ -1,6 +1,25 @@
 <?php
-namespace MoveElevator\Styleguide\ViewHelpers\Render;
 
+/*
+ * This file is part of the TYPO3 CMS extension "typo3_styleguide".
+ *
+ * Copyright (C) 2025 move elevator GmbH <km@move-elevator.de>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+namespace MoveElevator\Styleguide\ViewHelpers\Render;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
@@ -19,7 +38,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  * <sg:render.template file="EXT:myext/Resources/Private/Templates/MyTemplate.html" variables="{myVar: 'value'}" />
  * ```
- *
  */
 class TemplateViewHelper extends AbstractViewHelper
 {
@@ -44,34 +62,32 @@ class TemplateViewHelper extends AbstractViewHelper
     {
         /** @var string|null $file */
         $file = $this->arguments['file'];
-        if (null === $file) {
+        if ($file === null) {
             /** @var string|null $file */
             $file = $this->renderChildren();
         }
 
-        $file = GeneralUtility::getFileAbsFileName((string) $file);
+        $file = GeneralUtility::getFileAbsFileName((string)$file);
         $view = static::getPreparedView();
-        if (method_exists($view, 'setRequest')) {
-            $view->setRequest(self::resolveRequestFromRenderingContext($this->renderingContext));
-        }
-        $view->setTemplatePathAndFilename($file);
+        $view->setRequest(self::resolveRequestFromRenderingContext($this->renderingContext)); // @phpstan-ignore method.deprecatedClass
+        $view->setTemplatePathAndFilename($file); // @phpstan-ignore method.deprecatedClass
         if (is_array($this->arguments['variables'])) {
             $view->assignMultiple($this->arguments['variables']);
         }
         /** @var string|null $format */
         $format = $this->arguments['format'];
-        if (null !== $format) {
-            $view->setFormat($format);
+        if ($format !== null) {
+            $view->setFormat($format); // @phpstan-ignore method.deprecatedClass
         }
         $paths = $this->arguments['paths'];
         if (is_array($paths)) {
             if (isset($paths['layoutRootPaths']) && is_array($paths['layoutRootPaths'])) {
                 $layoutRootPaths = $this->processPathsArray($paths['layoutRootPaths']);
-                $view->setLayoutRootPaths($layoutRootPaths);
+                $view->setLayoutRootPaths($layoutRootPaths); // @phpstan-ignore method.deprecatedClass
             }
             if (isset($paths['partialRootPaths']) && is_array($paths['partialRootPaths'])) {
                 $partialRootPaths = $this->processPathsArray($paths['partialRootPaths']);
-                $view->setPartialRootPaths($partialRootPaths);
+                $view->setPartialRootPaths($partialRootPaths); // @phpstan-ignore method.deprecatedClass
             }
         }
         return static::renderView($view, $this->arguments);
@@ -85,13 +101,13 @@ class TemplateViewHelper extends AbstractViewHelper
     {
         $pathsArray = [];
         foreach ($paths as $key => $path) {
-            $pathsArray[$key] = (0 === strpos($path, 'EXT:')) ? GeneralUtility::getFileAbsFileName($path) : $path;
+            $pathsArray[$key] = (str_starts_with($path, 'EXT:')) ? GeneralUtility::getFileAbsFileName($path) : $path;
         }
 
         return $pathsArray;
     }
 
-    public static function resolveRequestFromRenderingContext(RenderingContextInterface $renderingContext)
+    public static function resolveRequestFromRenderingContext(RenderingContextInterface $renderingContext): object
     {
         $request = null;
         if (method_exists($renderingContext, 'getRequest')) {
@@ -105,10 +121,7 @@ class TemplateViewHelper extends AbstractViewHelper
         return $request;
     }
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view
-     */
-    protected static function renderView($view, array $arguments): string
+    protected static function renderView(StandaloneView $view, array $arguments): string //@phpstan-ignore parameter.deprecatedClass
     {
         try {
             /** @var string|null $content */
@@ -119,13 +132,13 @@ class TemplateViewHelper extends AbstractViewHelper
             }
             $content = $error->getMessage() . ' (' . $error->getCode() . ')';
         }
-        return (string) $content;
+        return (string)$content;
     }
 
-    protected static function getPreparedView(): StandaloneView
+    protected static function getPreparedView(): StandaloneView //@phpstan-ignore return.deprecatedClass
     {
         /** @var StandaloneView $view */
-        $view = GeneralUtility::makeInstance(StandaloneView::class);
+        $view = GeneralUtility::makeInstance(StandaloneView::class); //@phpstan-ignore classConstant.deprecatedClass
         return $view;
     }
 }
