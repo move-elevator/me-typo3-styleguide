@@ -191,6 +191,7 @@
 
 .typo3-styleguide__color-label {
     font-style: italic;
+    text-align: center;
 }
 
 .typo3-styleguide__font {
