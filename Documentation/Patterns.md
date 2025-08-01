@@ -13,7 +13,7 @@ The following patterns are available:
 
 This pattern provides a simple image template that can be used to display images, e.g. logos consistently.
 
-![pattern-image.jpg](Documentation/Images/pattern-image.jpg)
+![pattern-image.jpg](Images/pattern-image.jpg)
 
 *Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Images.html`
 
@@ -33,7 +33,7 @@ Example data:
 
 This pattern provides a simple icon template that can be used to display all icons/images within a provided path.
 
-![pattern-icons.jpg](Documentation/Images/pattern-icons.jpg)
+![pattern-icons.jpg](Images/pattern-icons.jpg)
 
 *Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Icons.html`
 
@@ -48,7 +48,7 @@ Example data:
 
 This pattern provides a simple color template that can be used to display colors consistently, e.g. for a color palette.
 
-![pattern-colors.jpg](Documentation/Images/pattern-colors.jpg)
+![pattern-colors.jpg](Images/pattern-colors.jpg)
 
 *Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Colors.html`
 
@@ -72,7 +72,7 @@ Example data:
 
 This pattern provides a simple font template that can be used to display available fonts consistently, e.g. for a typography styleguide.
 
-![pattern-font.jpg](Documentation/Images/pattern-font.jpg)
+![pattern-font.jpg](Images/pattern-font.jpg)
 
 *Frontend template*: `EXT:typo3_styleguide/Resources/Private/Templates/Patterns/Fonts.html`
 
