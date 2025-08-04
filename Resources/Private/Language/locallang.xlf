@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages">
 		<header/>
 		<body>
+			<trans-unit id="backend_layout.styleguide">
+				<source>Styleguide</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.content_area">
+				<source>Content area</source>
+			</trans-unit>
 			<trans-unit id="usages.toolbar-label">
 				<source>Last Update</source>
 			</trans-unit>
@@ -32,6 +38,9 @@
 			</trans-unit>
 			<trans-unit id="technical_headline.toc.title">
 				<source>Table of contents</source>
+			</trans-unit>
+			<trans-unit id="page.styleguide">
+				<source>Styleguide</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -3,6 +3,14 @@
 	<file source-language="en" datatype="plaintext" original="messages">
 		<header/>
 		<body>
+			<trans-unit id="backend_layout.styleguide">
+				<source />
+				<target>Styleguide</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.content_area">
+				<source />
+				<target>Inhaltsbereich</target>
+			</trans-unit>
 			<trans-unit id="usages.toolbar-label">
 				<source />
 				<target>Letzte Aktualisierung</target>
@@ -42,6 +50,10 @@
 			<trans-unit id="technical_headline.toc.title">
 				<source />
 				<target>Inhaltsverzeichnis</target>
+			</trans-unit>
+			<trans-unit id="page.styleguide">
+				<source />
+				<target>Styleguide</target>
 			</trans-unit>
 		</body>
 	</file>
