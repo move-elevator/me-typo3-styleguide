@@ -1,0 +1,13 @@
+mod.web_layout.BackendLayouts.Styleguide {
+  title = LLL:EXT:typo3_styleguide/Resources/Private/Language/locallang.xlf:backend_layout.styleguide
+  config.backend_layout {
+    colCount = 1
+    rowCount = 1
+    rows {
+      1.columns.1 {
+        name = LLL:EXT:typo3_styleguide/Resources/Private/Language/locallang.xlf:backend_layout.content_area
+        colPos = 0
+      }
+    }
+  }
+}
