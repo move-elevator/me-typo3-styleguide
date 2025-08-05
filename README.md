@@ -61,6 +61,8 @@ Include static TypoScript template via the backend or import it:
 - [Static Templates](Documentation/StaticTemplates.md)
 - [Patterns](Documentation/Patterns.md)
 - [ViewHelpers](Documentation/ViewHelpers/CLASSES.md)
+- [BackendLayout](Documentation/BackendLayout.md)
+- [PageType](Documentation/PageType.md)
 
 
 ## 🧑‍💻 Contributing
