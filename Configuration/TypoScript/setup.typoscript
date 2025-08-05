@@ -9,3 +9,7 @@ tt_content {
     templateName = TechnicalHeadline
   }
 }
+
+[traverse(page, "doktype") == 1754310721]
+  page.meta.robots = noindex,nofollow
+[end]

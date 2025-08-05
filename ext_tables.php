@@ -21,11 +21,11 @@ declare(strict_types=1);
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace MoveElevator\Styleguide;
+use MoveElevator\Styleguide\Configuration;
 
-class Configuration
-{
-    final public const EXT_KEY = 'typo3_styleguide';
-    final public const EXT_NAME = 'Typo3Styleguide';
-    final public const PAGE_TYPE = 1754310721;
-}
+(static function (): void {
+    $GLOBALS['PAGES_TYPES'][Configuration::PAGE_TYPE] = [
+        'type' => 'styleguide',
+        'allowedTables' => '*',
+    ];
+})();

@@ -21,11 +21,13 @@ declare(strict_types=1);
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace MoveElevator\Styleguide;
+use TYPO3\CMS\Core\Information\Typo3Version;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class Configuration
-{
-    final public const EXT_KEY = 'typo3_styleguide';
-    final public const EXT_NAME = 'Typo3Styleguide';
-    final public const PAGE_TYPE = 1754310721;
-}
+(static function (): void {
+    $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
+    if ($versionInformation->getMajorVersion() < 12) {
+        ExtensionManagementUtility::addPageTSConfig('@import "EXT:typo3_styleguide/Configuration/page.tsconfig"');
+    }
+})();

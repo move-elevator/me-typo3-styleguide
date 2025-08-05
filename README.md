@@ -24,6 +24,8 @@ This extension provides several tools for a simple TYPO3 based styleguide.
 * Static templates for rendering any templates or partials
 * Predefined template patterns for images, icons, colors and fonts
 * Collection of TYPO3 ViewHelpers for reuse in templates
+* Custom page type for styleguide pages
+* Backend layout for styleguide pages
 
 ## 🔥 Installation
 
@@ -59,6 +61,8 @@ Include static TypoScript template via the backend or import it:
 - [Static Templates](Documentation/StaticTemplates.md)
 - [Patterns](Documentation/Patterns.md)
 - [ViewHelpers](Documentation/ViewHelpers/CLASSES.md)
+- [BackendLayout](Documentation/BackendLayout.md)
+- [PageType](Documentation/PageType.md)
 
 
 ## 🧑‍💻 Contributing

@@ -21,11 +21,15 @@ declare(strict_types=1);
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace MoveElevator\Styleguide;
+use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
-class Configuration
-{
-    final public const EXT_KEY = 'typo3_styleguide';
-    final public const EXT_NAME = 'Typo3Styleguide';
-    final public const PAGE_TYPE = 1754310721;
-}
+return [
+    'apps-pagetree-page-styleguide' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:typo3_styleguide/Resources/Public/Icons/page-styleguide.svg',
+    ],
+    'apps-pagetree-page-styleguide-hideinmenu' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:typo3_styleguide/Resources/Public/Icons/page-styleguide-hidden.svg',
+    ],
+];
